@@ -37,6 +37,13 @@ A set of opentofu (terraform fork) examples to dive into the code
 - `main.tf` : change IP/Gateway/Resolver
 - `vars.tf` : setup PROXMOX_ vars and put your SSH key
 
+### proxmox-clone-direnv
+
+- `main.tf` : change IP/Gateway/Resolver
+- `vars.tf` : and put your SSH key
+- `.envrc`  : setup PROXMOX_ vars
+- cd to the directory and execute `direnv allow` 
+
 ## Documentation
 ### setup
 [Setup BPG/provider](https://culturelinux.github.io/doc/iac/opentofu/#providers)
