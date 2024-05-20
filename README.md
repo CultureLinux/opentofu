@@ -46,9 +46,9 @@ A set of opentofu (terraform fork) examples to dive into the code
 
 ## Documentation
 ### setup
-[Setup BPG/provider](https://culturelinux.github.io/doc/iac/opentofu/#providers)
-[Setup OVH](https://registry.terraform.io/providers/ovh/ovh/latest/docs)
+- [Setup BPG/provider](https://culturelinux.github.io/doc/iac/opentofu/#providers)
+- [Setup OVH](https://registry.terraform.io/providers/ovh/ovh/latest/docs)
 
 ### videos 
-[Playlist YT proxmox](https://www.youtube.com/watch?v=w9Eb7f8dr6k&list=PLstyDDGv-B4F8MgLCD1J4Ze_2dp_54HYB)
-[Direnv](https://www.youtube.com/watch?v=uN_IxJlAMEU)
+- [Playlist YT proxmox](https://www.youtube.com/watch?v=w9Eb7f8dr6k&list=PLstyDDGv-B4F8MgLCD1J4Ze_2dp_54HYB)
+- [Direnv](https://www.youtube.com/watch?v=uN_IxJlAMEU)
