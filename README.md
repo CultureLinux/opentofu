@@ -21,6 +21,16 @@ A set of opentofu (terraform fork) examples to dive into the code
     echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
     cd proxmox-clone-direnv
     direnv allow
+### ovh
+#### Create token
+[OVH Token Generation](https://eu.api.ovh.com/createToken/)
+#### Permissions for the domain (example.com)
+    GET : /domain/zone/example.com/record/*
+    PUT: /domain/zone/example.com/record/*
+    DELETE: /domain/zone/example.com/record/*
+    GET: /domain/zone/example.com/record
+    POST: /domain/zone/example.com/record
+    POST: /domain/zone/example.com/refresh
 
 ## test 
     tofu version
@@ -43,6 +53,10 @@ A set of opentofu (terraform fork) examples to dive into the code
 - `vars.tf` : and put your SSH key
 - `.envrc`  : setup PROXMOX_ vars
 - cd to the directory and execute `direnv allow` 
+
+### ovh-create-subdomain
+
+- `main.tf` : change PTR_A and PTR_CNAME
 
 ## Documentation
 ### setup
