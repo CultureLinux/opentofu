@@ -11,12 +11,15 @@ A set of opentofu (terraform fork) examples to dive into the code
 - *OPTION* ovh account (with a domain) 
 - *OPTION* direnv 
 - *OPTION* loop cloud images 
-
+- *OPTION* ansible installation + role proxmox 
+  
 ## install
+
 ### proxmox
     wget https://github.com/opentofu/opentofu/releases/download/v1.7.1/tofu_1.7.1_linux_amd64.zip
     unzip tofu_1.7.1_linux_amd64.zip
     mv tofu /usr/local/bin/
+
 ### direnv
     curl -sfL https://direnv.net/install.sh | bash
     echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
@@ -38,6 +41,14 @@ A set of opentofu (terraform fork) examples to dive into the code
 - </> [Ansible role](https://github.com/CultureLinux/ansible/tree/main/roles/proxmox-cloud-template)
 - ▶️ [YT ansible loop](https://www.youtube.com/watch?v=sAzRL-oxpX8)
 - ▶️ [YT opentofu loop](https://www.youtube.com/watch?v=IIqTbm5CuSs)
+- 
+### opentofu + ansible
+- </> [Ansible role](https://github.com/CultureLinux/ansible)
+- ▶️ [YT opentofu + ansible](https://youtu.be/f8MYma8LtD4)
+- ⚠️ansible and opentofu should be on same user
+- ⚠️in `vars.tf` you must add the ssh key of user to allow ansible to connect to the vm
+
+
 ## test 
     tofu version
 
@@ -62,12 +73,19 @@ A set of opentofu (terraform fork) examples to dive into the code
 
 ### ovh-create-subdomain
 
+- `provider.tf` : change application keys and secret
 - `main.tf` : change PTR_A and PTR_CNAME
 
 ### proxmox-clone-loop
 - ⚠️idx from `vars.tf` is used to setup dns ip
 - `main.tf` : change IP/Gateway/Resolver (192.186.1.) and the idw value will be added on IP 192.168.1.180
 - `vars.tf` : setup proxmox node name, put your SSH key, be sure to have VM's generic templates [1003,1001] in place
+- `.envrc`  : setup PROXMOX_ vars
+- cd to the directory and execute `direnv allow` 
+
+### proxmox-clone-ansible
+- `main.tf` : change IP/Gateway/Resolver, change ANSIBLE_HOME to match yours
+- `vars.tf` : and put your SSH key
 - `.envrc`  : setup PROXMOX_ vars
 - cd to the directory and execute `direnv allow` 
 
