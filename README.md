@@ -12,7 +12,8 @@ A set of opentofu (terraform fork) examples to dive into the code
 - *OPTION* direnv 
 - *OPTION* loop cloud images 
 - *OPTION* ansible installation + role proxmox 
-  
+- *OPTION* scaleway account 
+
 ## install
 
 ### proxmox
@@ -89,10 +90,18 @@ A set of opentofu (terraform fork) examples to dive into the code
 - `.envrc`  : setup PROXMOX_ vars
 - cd to the directory and execute `direnv allow` 
 
+### scaleway-compute
+- `main.tf` : Adjust firewall to match your restrictions
+- `vars.tf` : Setup PROJECT_ID,zone,region,type and image
+- `.envrc`  : setup SCW_ vars
+- cd to the directory and execute `direnv allow` 
+
+
 ## Documentation
 ### setup
 - </> [Setup BPG/provider](https://culturelinux.github.io/doc/iac/opentofu/#providers)
 - </> [Setup OVH](https://registry.terraform.io/providers/ovh/ovh/latest/docs)
+- </> [Setup Scaleway](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs)
 
 ### videos 
 - ▶️ [Playlist YT proxmox](https://www.youtube.com/watch?v=w9Eb7f8dr6k&list=PLstyDDGv-B4F8MgLCD1J4Ze_2dp_54HYB)
